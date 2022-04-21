@@ -12,12 +12,15 @@ class MyMouseTrack:
         self.time_start = time.time()
 
     def start_track(self):
+        # set window name
+        window_name = self.image_name.split('/')[-1].split('.')[0]
+
         # read and display the image
         img = cv2.imread(self.image_name, 1)
-        cv2.imshow('image', img)
+        cv2.imshow(window_name, img)
     
         # setting mouse handler for the image and calling the move_event() function
-        cv2.setMouseCallback('image', self.move_event)
+        cv2.setMouseCallback(window_name, self.move_event)
 
         # 0: wait for a key to be pressed to exit
         # n: wait n milliseconds then exit
