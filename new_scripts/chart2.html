@@ -78,6 +78,7 @@
                 .on("click", function (d) {
                     currentPos = d3.mouse(this);
                     click.push([currentPos[0], currentPos[1], new Date()-startTime]);
+                    console.log(currentPos)
                 });
 
             //create svg for histogram.
@@ -298,8 +299,8 @@
 
     // Mouse Movements Collection
     var startTime = new Date();
-    var pos = {};
-    var click = {};
+    var pos = new Array();
+    var click = new Array();
 
     dashboard('#dashboard',freqData);
 </script>
