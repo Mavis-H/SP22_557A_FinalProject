@@ -1,0 +1,214 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x:hidden;
+    position:relative;
+    /*background: #12073b;*/
+    background-color: #fffdf7;
+}
+
+
+h1 {
+    font-family: "HK Grotesk";
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: rgb(83, 134, 109);
+    text-align: center;
+    font-size: 28px;
+    margin: 30px 0px 0px 0px;
+}
+
+h2 {
+    font-family: "Space Mono";
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: rgb(72, 96, 95);
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0px 0px 0px;
+}
+
+h2.one {
+    font-family: "Space Mono";
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: rgb(43, 56, 56);
+    text-align: center;
+    font-size: 28px;
+    margin: 15px 0px 0px 0px;
+}
+
+
+h3 {
+    font-family: "Space Mono";
+    font-weight: normal;
+    letter-spacing: 3px;
+    /*color: rgba(255, 255, 255, 0.96);*/
+    text-align: center;
+    font-size: 13px;
+    margin: 0px 5px 10px 10px;
+}
+
+h4 {
+    font-family: "Space Mono";
+    font-weight: normal;
+    letter-spacing: 1px;
+    height:20px;
+    width: 200px;
+    /*background-color: #e9e3ff;*/
+    color: #7fa9a8;
+    text-align: left;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+h5 {
+    font-family: "Space Mono";
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: rgb(58, 77, 77);
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0px 0px 0px;
+}
+
+
+.wrapper {
+    height: 100%;
+    /*background: #263729;*/
+}
+.page {
+    float:left;
+    /*background: #992213;*/
+    background-size: cover;
+    min-height: 100%;
+    padding-top: 0px;
+}
+
+a {
+    font-family: "Space Mono";
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: rgb(48, 79, 78);
+    text-align: center;
+    font-size: 13px;
+    margin: 10px 0px 10px 20px;
+}
+
+a.selected{
+    font-family: "Space Mono";
+    font-weight: bolder;
+    letter-spacing: 3px;
+    color: rgb(33, 79, 78);
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0px 10px 20px;
+}
+
+
+.simulate{
+    height:2000px;
+}
+
+.column1 {
+    flex: 50%;
+    padding: 5px 25px;
+    /*background-color: #d3e8e3;*/
+    /*border: 3px solid #8575ee;*/
+    /*border-radius: 0px 40px 40px 0px;*/
+    margin-right: 3px;
+}
+
+.column2 {
+    flex: 50%;
+    padding: 5px 25px;
+    /*background-color: #daefea;*/
+    /*border: 3px solid #5b24cb;*/
+    /*border-radius: 40px 0px 0px 40px;*/
+    margin-left: 3px;
+}
+
+/*!* Clear floats after the columns *!*/
+/*.row:after {*/
+/*    content: "";*/
+/*    display: table;*/
+/*    clear: both;*/
+/*}*/
+
+.row {
+    display: flex;
+    margin: 35px 30px 0px 20px;
+    justify-content: space-between;
+}
+
+
+path.domain  {
+    stroke: #7fa9a8;
+}
+
+path.range  {
+    stroke: rgba(52, 179, 196, 0.27);
+}
+
+.tick text {
+    fill: #567a78;
+    font-family: "HK Grotesk";
+    font-size: 10px;
+}
+
+.tick line {
+    stroke: rgb(152, 183, 176);
+}
+
+#pichart {
+    width: 500px;
+    height: 550px;
+}
+
+
+#operatorChart {
+    /*float: left;*/
+    /*width: 100%;*/
+    /*padding: 0 20px;*/
+    /*margin-left: 20px;*/
+    margin-top: 30px;
+}
+
+#operatorDetails {
+    height: 300px;
+    align-content: center;
+    margin-top: 30px;
+    margin-right: 10px;
+    border: 4px solid rgba(92, 162, 162, 0.3);
+    border-radius: 12px;
+    box-shadow:
+            0 0px 20px rgba(255, 255, 255, 0.11);
+
+}
+
+
+.operatorChartSvg {
+    /*width: 790px;*/
+    /*margin-left: 50px;*/
+    /*padding-left: 10px;*/
+}
+
+#incidentsTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    /*float: left;*/
+    /*width: 60%;*/
+}
+
+.form-select {
+    color: #475421;
+    background-color: rgba(185, 211, 97, 0.6);
+    font-size: 17px;
+    border-radius: 6px;
+    border-width: 0px;
+    font-family: "Space Mono";
+    padding: 10px;
+    align-content: center;
+}
