@@ -6,12 +6,26 @@ var parseDate = d3.timeParse("%Y");
 // Start app after loading data
 loadData();
 
+// Mouse Movements Tracking
+var startTime = new Date();
+var pos = [];
+var click = [];
+
 $(document).ready(function () {
     var sildeNum = $('.page').length,
         wrapperWidth = 100 * sildeNum,
         slideWidth = 100/sildeNum;
     $('.wrapper').width(wrapperWidth + '%');
-    $('.page').width(slideWidth + '%');
+    $('.page')
+        .width(slideWidth + '%')
+        .on("mousemove", function (event) {
+            currentPos = d3.pointer(event, this);
+            pos.push([currentPos[0], currentPos[1], new Date()-startTime]);
+        })
+        .on("click", function (event) {
+            currentPos = d3.pointer(event, this);
+            click.push([currentPos[0], currentPos[1], new Date()-startTime]);
+        });
 
     $('a.scrollitem').click(function(){
         $('a.scrollitem').removeClass('selected');
@@ -24,6 +38,18 @@ $(document).ready(function () {
         return false;
     });
 });
+
+// Only works in Firefox
+function myDownload() {
+    var data = {};
+    data["position"] = pos;
+    data["click"] = click;
+    var myJsonData = JSON.stringify(data)
+    var a = document.getElementById("download");
+    var file = new Blob([myJsonData], {type: 'text/json'});
+    a.href = URL.createObjectURL(file);
+    a.download = 'mouse_data.json';
+}
 
 function loadData() {
 
